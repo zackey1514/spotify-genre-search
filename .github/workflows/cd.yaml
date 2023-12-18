@@ -23,7 +23,6 @@ jobs:
       - name: Create dot env file
         run: |
           touch .env.production
-          echo "NODE_ENV=${{ secrets.NODE_ENV }}" >> .env.production
           echo "PUBLIC_TWITTER_ID=${{ secrets.PUBLIC_TWITTER_ID }}" >> .env.production
           echo "SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}" >> .env.production
           echo "SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}" >> .env.production
