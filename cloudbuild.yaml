@@ -1,0 +1,25 @@
+steps:
+  - id: build
+    name: gcr.io/kaniko-project/executor:latest
+    args:
+      - --destination=${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}
+      - --dockerfile=Dockerfile
+      - --cache=true
+      - --cache-ttl=24h
+  - id: deploy
+    name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      [
+        'run',
+        'deploy',
+        '${_SERVICE_NAME}',
+        '--image',
+        '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:latest',
+        '--port',
+        '3000',
+        '--region',
+        'asia-northeast1'
+      ]
+    waitFor:
+      - build
