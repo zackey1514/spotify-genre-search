@@ -1,4 +1,4 @@
-# Search Spotify Genre
+# spotify-genre-search
 
 ### Requirement
 
