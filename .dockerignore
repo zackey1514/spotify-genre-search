@@ -8,3 +8,5 @@
 .prettierignore
 .prettierrc
 node_modules
+!.env
+!.env.production
