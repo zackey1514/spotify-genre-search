@@ -7,8 +7,8 @@ on:
       - '.github/workflows/**'
       - 'package.json'
       - 'yarn.lock'
-      - 'Dockerfile'
       - 'cloudbuild.yaml'
+      - 'Dockerfile'
     branches:
       - main
 jobs:
