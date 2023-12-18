@@ -1,5 +1,7 @@
 # spotify-genre-search
 
+![build](https://github.com/zackey1514/spotify-genre-search/actions/workflows/cd.yaml/badge.svg)
+
 ### Requirement
 
 - [bun](https://bun.sh/docs/installation)
