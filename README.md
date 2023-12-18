@@ -2,7 +2,7 @@
 
 ### Requirement
 
-- bun
+- [bun](https://bun.sh/docs/installation)
 
 ## Getting Started
 
