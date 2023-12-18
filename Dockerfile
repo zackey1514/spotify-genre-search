@@ -16,6 +16,7 @@ FROM node:20.10.0-alpine3.18
 WORKDIR /app
 
 COPY --from=build /app/package.json /app/yarn.lock ./
+COPY --from=build /app/.svelte-kit ./.svelte-kit
 COPY --from=build /app/build ./build
 
 RUN yarn install --production --immutable --immutable-cache
