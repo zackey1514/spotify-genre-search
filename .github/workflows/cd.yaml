@@ -1,6 +1,14 @@
 name: deploy
 on:
   push:
+    paths:
+      - 'src/**'
+      - 'static/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'yarn.lock'
+      - 'Dockerfile'
+      - 'cloudbuild.yaml'
     branches:
       - main
 jobs:
