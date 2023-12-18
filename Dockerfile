@@ -8,8 +8,6 @@ RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn yarn ins
 
 COPY . /app
 
-RUN ls -la
-
 RUN yarn run build
 
 ### PRODUCTION
@@ -21,5 +19,6 @@ COPY --from=build /app/package.json /app/yarn.lock ./
 COPY --from=build /app/build ./build
 
 RUN yarn install --production --immutable --immutable-cache
+RUN yarn cache clean
 
 CMD ["node", "build"]
