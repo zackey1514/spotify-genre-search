@@ -1,0 +1,10 @@
+.git
+.svelte-kit
+.vscode
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.npmrc
+.prettierignore
+.prettierrc
+node_modules
