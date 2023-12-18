@@ -26,4 +26,4 @@ jobs:
         run: 'gcloud info'
 
       - name: 'Build and deploy'
-        run: 'gcloud builds submit . --account ${{ secrets.SERVICE_ACCOUNT }} --substitutions _LOCATION=${{ secrets.GCP_REGION }},_REPOSITORY=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }},_IMAGE=${{ secrets.GCP_IMAGE }},_SERVICE_NAME=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }}'
+        run: 'gcloud builds submit . --substitutions _LOCATION=${{ secrets.GCP_REGION }},_REPOSITORY=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }},_IMAGE=${{ secrets.GCP_IMAGE }},_SERVICE_NAME=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }}'
