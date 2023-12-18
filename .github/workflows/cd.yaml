@@ -23,5 +23,6 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v1'
         with:
           version: '>= 379.0.0'
+      - run: ls -la
       - name: 'Build and deploy'
         run: 'gcloud builds submit . --account ${{ secrets.SERVICE_ACCOUNT }} --substitutions _LOCATION=${{ secrets.GCP_REGION }},_REPOSITORY=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }},_IMAGE=${{ secrets.GCP_IMAGE }},_SERVICE_NAME=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }}'
