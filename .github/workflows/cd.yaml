@@ -1,6 +1,5 @@
 name: deploy
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -21,9 +20,6 @@ jobs:
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
-
-      - name: 'Use gcloud CLI'
-        run: 'gcloud info'
 
       - name: 'Build and deploy'
         run: 'gcloud builds submit . --substitutions _LOCATION=${{ secrets.GCP_REGION }},_REPOSITORY=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }},_IMAGE=${{ secrets.GCP_IMAGE }},_SERVICE_NAME=${{ secrets.GCP_CLOUD_RUN_SERVICE_NAME }}'
