@@ -46,7 +46,7 @@
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
 		"@spotify/web-api-ts-sdk": "^1.1.2",
-		"hono": "3.11.4",
+		"hono": "3.11.7",
 		"zod": "^3.22.4"
 	}
 }
