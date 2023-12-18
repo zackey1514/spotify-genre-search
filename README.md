@@ -10,7 +10,7 @@
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/zackey1514/genre.git && cd genre
+   git clone git@github.com:zackey1514/spotify-genre-search.git && cd spotify-genre-search
    ```
 1. Install packages
    ```bash
