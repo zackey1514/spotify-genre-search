@@ -15,16 +15,6 @@
 			>
 				<GithubSolid class="w-4 h-4 text-gray-500 dark:text-gray-500 hover:text-gray-900" />
 			</FooterIcon>
-			<FooterIcon href="https://twitter.com/{PUBLIC_TWITTER_ID}" target="_blank" rel="noopener noreferrer">
-				<TwitterSolid class="w-4 h-4 text-gray-500 dark:text-gray-500 hover:text-gray-900" />
-			</FooterIcon>
-			<FooterIcon
-				href="https://bytheendofsummer.bandcamp.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<HeadphonesSolid class="w-4 h-4 text-gray-500 dark:text-gray-500 hover:text-gray-900" />
-			</FooterIcon>
 		</div>
 	</div>
 </Footer>
