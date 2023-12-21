@@ -9,6 +9,10 @@ on:
       - 'yarn.lock'
       - 'cloudbuild.yaml'
       - 'Dockerfile'
+      - '.gcloudignore'
+      - 'tailwind.config.cjs'
+      - 'postcss.config.cjs'
+      - 'vite.config.ts'
     branches:
       - main
 jobs:
