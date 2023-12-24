@@ -1,7 +1,6 @@
 <script>
-	import { PUBLIC_TWITTER_ID } from '$env/static/public';
-	import { Footer, FooterCopyright, FooterIcon } from 'flowbite-svelte';
-	import { GithubSolid, HeadphonesSolid, TwitterSolid } from 'flowbite-svelte-icons';
+	import { Footer, FooterIcon } from 'flowbite-svelte';
+	import { GithubSolid } from 'flowbite-svelte-icons';
 </script>
 
 <Footer>
