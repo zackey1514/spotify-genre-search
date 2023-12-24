@@ -16,6 +16,7 @@
 	import NoArtistMessage from '$lib/NoArtistMessage.svelte';
 	import NotFoundArtistMessage from '$lib/NotFoundArtistMessage.svelte';
 	import Link from '$lib/Link.svelte';
+	
 	const client = hc<ApiRoute>('/api');
 
 	const items = [
