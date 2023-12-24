@@ -1,24 +1,23 @@
 ### BUILD
-FROM node:20.10.0-bullseye AS build
+FROM oven/bun:1.0.18-debian AS build
 
 WORKDIR /app
 
-COPY ./package.json yarn.lock ./
-RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn yarn install --immutable --immutable-cache
+COPY ./package.json ./bun.lockb ./
+RUN bun i --frozen-lockfile
 
 COPY . /app
 
-RUN yarn run build
+RUN bun run build
 
 ### PRODUCTION
-FROM node:20.10.0-alpine3.18
+FROM oven/bun:1.0.18-alpine
 
 WORKDIR /app
 
-COPY --from=build /app/package.json /app/yarn.lock ./
+COPY --from=build /app/package.json /app/bun.lockb ./
 COPY --from=build /app/build ./build
 
-RUN yarn install --production --immutable --immutable-cache
-RUN yarn cache clean
+RUN bun i -p --frozen-lockfile
 
-CMD ["node", "build"]
+CMD ["bun", "--bun", "run", "build"]
