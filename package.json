@@ -3,8 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"engines": {
-		"node": "20.10.x",
-		"npm": "please_use_bun_or_yarn_instead"
+		"npm": "please_use_bun_instead",
+		"yarn": "please_use_bun_instead",
+		"pnpm": "please_use_bun_instead"
 	},
 	"scripts": {
 		"dev": "vite dev",
