@@ -9,4 +9,5 @@
 .prettierrc
 .github
 node_modules
+.env.*
 !.env
