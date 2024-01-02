@@ -3,14 +3,12 @@ import { SpotifyApi } from '@spotify/web-api-ts-sdk';
 import { cors } from 'hono/cors';
 import { HTTPException } from 'hono/http-exception';
 import { logger } from 'hono/logger'
-// import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
+import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 import { convertLimit, convertOffset } from '../util/util';
 
 const spotifyClient = SpotifyApi.withClientCredentials(
-	// SPOTIFY_CLIENT_ID,
-	// SPOTIFY_CLIENT_SECRET,
-	'49f19103264d446582cd80dbceebed1e',
-	'e236a55bd41247fabf3ea12b428632b3',
+	SPOTIFY_CLIENT_ID,
+	SPOTIFY_CLIENT_SECRET,
 	[]
 );
 
