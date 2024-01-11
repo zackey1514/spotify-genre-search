@@ -10,3 +10,4 @@ cloudbuild*.yaml
 LICENSE
 README.md
 build.sh
+coverage

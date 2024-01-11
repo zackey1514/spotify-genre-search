@@ -16,6 +16,7 @@
 .env.example
 .vscode
 node_modules
+coverage
 build
 cloudbuild*
 LICENSE
