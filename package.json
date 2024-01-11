@@ -1,7 +1,8 @@
 {
   "name": "search-spotify-genre",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "engines": {
     "npm": "please_use_bun_instead",
     "yarn": "please_use_bun_instead",
@@ -16,6 +17,12 @@
     "test": "vitest",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@spotify/web-api-ts-sdk": "^1.1.2",
+    "hono": "^3.12.2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^2.0.0",
@@ -44,12 +51,5 @@
     "typescript": "^5.0.0",
     "vite": "^5.0.0",
     "vitest": "^1.0.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "@spotify/web-api-ts-sdk": "^1.1.2",
-    "hono": "^3.12.2",
-    "zod": "^3.22.4"
   }
 }
