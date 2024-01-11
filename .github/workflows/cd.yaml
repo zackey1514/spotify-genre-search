@@ -6,6 +6,7 @@ on:
       - 'static/**'
       - '.github/workflows/**'
       - 'package.json'
+      - 'bun.lockb'
       - 'yarn.lock'
       - 'cloudbuild.yaml'
       - 'Dockerfile'
