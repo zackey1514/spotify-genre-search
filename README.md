@@ -1,6 +1,6 @@
 # spotify-genre-search
 
-![build](https://github.com/zackey1514/spotify-genre-search/actions/workflows/cd.yaml/badge.svg)
+![build](https://github.com/zackey1514/spotify-genre-search/actions/workflows/deploy.yaml/badge.svg)
 
 ### Requirement
 
