@@ -3,7 +3,7 @@ import { SpotifyApi } from '@spotify/web-api-ts-sdk';
 import { cors } from 'hono/cors';
 import { HTTPException } from 'hono/http-exception';
 import { logger } from 'hono/logger';
-import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
+import { ORIGIN, SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 import { convertLimit, convertOffset } from '../util/util';
 
 const spotifyClient = SpotifyApi.withClientCredentials(
@@ -15,7 +15,7 @@ const spotifyClient = SpotifyApi.withClientCredentials(
 export const apiApp = new Hono();
 
 apiApp.use('*', logger());
-apiApp.use('*', cors());
+apiApp.use('*', cors({ origin: ORIGIN }));
 
 const apiRoute = apiApp
   .get('/artists/:id', async (c) => {

@@ -30,6 +30,7 @@ jobs:
           touch .env.production
           echo "SPOTIFY_CLIENT_ID=${{ secrets.SPOTIFY_CLIENT_ID }}" >> .env.production
           echo "SPOTIFY_CLIENT_SECRET=${{ secrets.SPOTIFY_CLIENT_SECRET }}" >> .env.production
+          echo "ORIGIN=${{ secrets.ORIGIN }}" >> .env.production
 
       - id: 'auth'
         uses: 'google-github-actions/auth@v2'
